@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="200.0" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLExampleHandler">
+   <children>
+      <MenuBar layoutY="2.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+        <menus>
+          <Menu fx:id="port" mnemonicParsing="false" text="Port">
+            <items>
+                <MenuItem fx:id="com1" mnemonicParsing="false" onAction="#menuCom1Click" text="COM1" />
+                <MenuItem fx:id="com2" mnemonicParsing="false" onAction="#menuCom2Click" text="COM2" />
+                <MenuItem fx:id="com3" mnemonicParsing="false" onAction="#menuCom3Click" text="COM3" />
+                <MenuItem fx:id="com4" mnemonicParsing="false" onAction="#menuCom4Click" text="COM4" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutY="27.0" prefHeight="65.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+          <Button fx:id="btnOpen" mnemonicParsing="false" onAction="#btnOpenClick" prefHeight="55.0" prefWidth="55.0" text="Open">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+          <Button fx:id="btnClose" mnemonicParsing="false" onAction="#btnCloseClick" prefHeight="55.0" prefWidth="55.0" text="Close" />
+            <GridPane prefHeight="55.0" prefWidth="374.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="98.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="64.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="36.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="64.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Handler Ready">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Ready To Test" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Socket 1" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Socket 2" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <CheckBox fx:id="ckboxHandlerReady" mnemonicParsing="false" onAction="#ckboxHandlerReadyClick" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="ckboxReadyToTest" mnemonicParsing="false" onAction="#ckboxReadyToTestClick" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="ckboxSocket1" mnemonicParsing="false" onAction="#ckboxSocket1Click" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="ckboxSocket2" mnemonicParsing="false" onAction="#ckboxSocket2Click" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+                  <Label prefHeight="15.0" prefWidth="88.0" text="Handler ACK" GridPane.columnIndex="4">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <CheckBox mnemonicParsing="false" GridPane.columnIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+               </children>
+            </GridPane>
+            <Button fx:id="show" mnemonicParsing="false" onAction="#showClick" text="show" />
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToolBar>
+   </children>
+</AnchorPane>
